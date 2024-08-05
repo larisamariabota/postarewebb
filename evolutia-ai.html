@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inteligenta Artificiala</title>
+    <style>
+       
+        /* Stiluri CSS */
+        .cadru-mare {
+            border: 2px solid pink;
+            outline: 3px solid purple;
+            padding: 85px;
+            max-width: 80%; /* Lățimea maximă pentru a nu fi prea mare */
+            text-align: center;
+            margin: 50px auto; /* Centrare pe axa orizontală cu margin: auto; */
+            position: relative;
+            font-family: Arial, sans-serif; /* Fontul textului */
+            background-color: #ffe6f0; /* Culoare de fundal roz pal */
+        }
+        
+        .cadru-mare img {
+            width: 250px;
+            height: 230px;
+            margin-bottom: 20px;
+            border-radius: 10px; /* Păstrăm colțurile rotunjite */
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.3); /* Umbra pentru poze */
+            transition: transform 0.3s ease;
+        }
+        
+        .cadru-mare img:hover {
+            transform: scale(1.1); /* Mărire la hover pentru poze */
+        }
+        
+        .cadru-mare p {
+            line-height: 1.6;
+            margin-bottom: 20px;
+            font-size: 18px; /* Mărimea fontului pentru paragrafe */
+            color: #555; /* Culoarea textului */
+        }
+        
+        .cadru-mare hr {
+            border: 1px solid #999; /* Stil pentru linia orizontală */
+            margin: 40px auto; /* Margin pentru linie */
+            width: 50%; /* Lățimea liniei */
+        }
+        
+        .cadru-mare ul {
+            list-style: none;
+            padding: 0;
+            margin-top: 20px;
+        }
+        
+        .cadru-mare li {
+            margin-bottom: 10px;
+            font-weight: bold;
+            color: #0a7e8c;
+            cursor: pointer;
+            transition: color 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .cadru-mare li img {
+            width: 100px;
+            height: 100px;
+            border-radius: 10px; /* Păstrăm colțurile rotunjite */
+            margin-right: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        }
+        
+        .cadru-mare li:hover {
+            color: #ff6f61;
+        }
+        
+        .cadru-mare img, .cadru-mare p, .cadru-mare li {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.5s ease, transform 0.5s ease;
+        }
+        
+        .cadru-mare.show-element img, .cadru-mare.show-element p, .cadru-mare.show-element li {
+            opacity: 1;
+            transform: translateY(0);
+        }
+		.titlu {
+        color: transparent;
+        font-size: 54px; /* Mărește dimensiunea textului */
+        background-image: url('binar.jpg');
+        -webkit-background-clip: text; /* Cliparea imaginii în text */
+        background-clip: text; /* Pentru compatibilitate cu browserele care nu utilizează prefixul -webkit- */
+        text-fill-color: transparent; /* Pentru a păstra culoarea textului transparentă */
+		text-align:center;
+    }
+		
+    </style>
+</head>
+<body>
+<header>
+<a href="Atestat.html" class="buton-iesire">&#x2665;</a>
+<div class="titlu">
+    <h1>Originile  AI</h1>
+</div>
+
+    <div id="evolutia-ai" class="cadru-mare">
+        <img src="turing.png" alt="Alan Turing">
+        <p>
+            Totul a început în Al Doilea Război Mondial când, Alan Turing,
+            unul dintre cei mai importanți oameni ai Marii Britanii,
+            pentru a se confrunta cu mașinăria nazistă Enigma,
+            o mașinărie folosită pentru generarea de cifruri și descriptarea de mesaje secrete,
+            creează mașinăria numită Victory, care reușește să spargă codurile naziștilor.
+        </p>
+        <hr>
+        <p>
+            Apoi, mai mulți cercetători au dezvoltat câteva versiuni timpurii ale inteligenței artificiale,
+            precum ELIZA (1966), un program de calculator conceput pentru a simula conversațiile
+            cu utilizatori umani; SHRDLU (1972), o interfață în limbaj natural pentru roboți;
+            și MYCIN (1974), un sistem expert pentru diagnosticarea bolilor infecțioase.
+            Cu toate acestea, aceste proiecte nu au progresat dincolo de aplicațiile
+            de bază din cauza puterii de calcul limitate la acea vreme.
+        </p>
+        <ul>
+            <li>
+                <img src="eli.jpg" alt=""> ELIZA
+            </li>
+            <li>
+                <img src="sh.jpg" alt=""> SHRDLU
+            </li>
+            <li>
+                <img src="my.jpg" alt=""> MYCIN
+            </li>
+        </ul>
+    </div>
+</header>
+<script>
+    // Script pentru a afișa elementele treptat la încărcarea paginii
+    document.addEventListener('DOMContentLoaded', function() {
+        document.querySelector('.cadru-mare').classList.add('show-element');
+    });
+</script>
+</body>
+</html>
